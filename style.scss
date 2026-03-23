@@ -1,0 +1,44 @@
+@use "./scss/base/reset" as *;
+@use "./scss/abstracts/functions" as *;
+@use "./scss/abstracts/mixins" as *;
+@use "./scss/abstracts/variables" as vars;
+@use "./scss/components/buttons" as *;
+@use "./scss/components/images.scss" as *;
+
+.mobile-version {
+  background-color: royalblue;
+}
+.mobile-navigation {
+  @include flex-center;
+
+  ul {
+    @include flex-center;
+    gap: 16px;
+  }
+}
+
+.mobile-header {
+  @include flex-center;
+  justify-content: space-between;
+
+  .mobile-header-nav {
+    @include flex-center;
+    gap: 10px;
+  }
+}
+
+.sidebar {
+  background-color: blueviolet;
+  flex-direction: column;
+}
+
+.grid-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .mobile-navigation {
+    background-color: lightgreen;
+  }
+}
