@@ -4,6 +4,7 @@
 @use "./scss/abstracts/variables" as vars;
 @use "./scss/components/buttons" as *;
 @use "./scss/components/images.scss" as *;
+@use "./scss/abstracts/responsive" as *;
 
 .mobile-version {
   background-color: royalblue;
@@ -16,8 +17,6 @@
   position: fixed;
   top: 0;
   left: 0;
-
-  
 
   height: 95px;
   width: 100%;
