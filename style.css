@@ -44,27 +44,41 @@ button {
 .mobile-navigation {
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 95px;
+  width: 100%;
 }
 .mobile-navigation ul {
   display: flex;
   align-items: center;
-  gap: 16px;
+  padding: 16px;
+  justify-content: space-around;
+  background-color: lightseagreen;
+  width: 100%;
 }
 
 .mobile-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 95px;
+  background-color: red;
+  justify-content: space-around;
+  width: 100%;
 }
 .mobile-header .mobile-header-nav {
   display: flex;
   align-items: center;
-  gap: 10px;
+  background-color: lightgreen;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .sidebar {
   background-color: blueviolet;
-  flex-direction: column;
 }
 
 .grid-section {
@@ -74,7 +88,7 @@ button {
 
 @media (min-width: 768px) {
   .mobile-navigation {
-    background-color: lightgreen;
+    display: none;
   }
 }
 
