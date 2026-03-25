@@ -1,0 +1,25 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  background-color: lightcoral;
+  @include ellipsis;
+
+  &:hover {
+    background-color: $bg-elevated-base;
+
+    &::after {
+    //   opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

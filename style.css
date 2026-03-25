@@ -31,12 +31,39 @@ button {
   color: inherit;
 }
 
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease;
+  background-color: lightcoral;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card:hover {
+  background-color: #242424;
+}
+.card:hover::after {
+  transform: translateY(0);
+}
+
 .grid-section img {
   width: 43px;
   height: 43px;
   border-radius: 3px;
 }
 
+@media (min-width: 768px) {
+  .mobile-version .mobile-navigation {
+    display: none;
+  }
+}
 .mobile-version {
   background-color: royalblue;
 }
@@ -49,14 +76,35 @@ button {
   left: 0;
   height: 95px;
   width: 100%;
+  margin-top: 0;
 }
 .mobile-navigation ul {
   display: flex;
   align-items: center;
   padding: 16px;
   justify-content: space-around;
+  align-items: center;
   background-color: lightseagreen;
   width: 100%;
+  height: 55px;
+}
+.mobile-navigation li a {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.mobile-navigation img {
+  width: 22px;
+  height: 22ps;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.mobile-navigation span {
+  font-size: 11px;
 }
 
 .mobile-header {
@@ -77,6 +125,13 @@ button {
   width: 100%;
 }
 
+li {
+  border-radius: 5px;
+  background-color: lightcoral;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
 .sidebar {
   background-color: blueviolet;
 }
@@ -84,12 +139,8 @@ button {
 .grid-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-}
-
-@media (min-width: 768px) {
-  .mobile-navigation {
-    display: none;
-  }
+  gap: 16px;
+  padding: 16px;
 }
 
 /*# sourceMappingURL=style.css.map */
